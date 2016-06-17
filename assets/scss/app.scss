@@ -1,6 +1,39 @@
+$color1: #ccc;
+$color2: #eee;
+$color3: #fff;
+$color4: #fa8072;
+
 body {
-  padding: 32px;
-  margin: 32px;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
+  margin: 32px;
+  padding: 32px;
+}
+
+.container {
+  background: $color2;
+  border: 1px solid $color1;
+  margin-bottom: 32px;
+  padding: 16px;
+}
+
+button {
+  background-color: $color3;
+  border: 1px solid $color1;
+  border-radius: 3px;
+  cursor: default;
+  padding: 4px 8px;
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &:not([disabled]):hover {
+    background-color: $color4;
+    color: $color3;
+  }
+}
+
+.highlight {
+  font-weight: bold;
 }
