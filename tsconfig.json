@@ -24,13 +24,8 @@
   },
   "files": [
     "./dev/app.component.ts",
-<<<<<<< HEAD
-    "./dev/boot.ts",
-    "./dev/property-binding.component.ts"
-=======
     "./dev/bindings/confirm.component.ts",
     "./dev/bindings/input.component.ts",
     "./dev/boot.ts"
->>>>>>> d1dd802b96db1ca6be1835ca73302ad14c893b40
   ]
 }

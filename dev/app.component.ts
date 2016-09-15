@@ -1,9 +1,9 @@
-import {Component} from 'angular2/core';
-import {InputComponent} from './bindings/input.component';
-import {ConfirmComponent} from './bindings/confirm.component';
+import {Component} from "angular2/core";
+import {InputComponent} from "./bindings/input.component";
+import {ConfirmComponent} from "./bindings/confirm.component";
 
 @Component({
-    selector: 'my-app',
+    selector: "my-app",
     template: `
         <div class="container">
         <my-input (submitted)="onSubmit($event)" [myself]="confirmedMyself"> </my-input>
@@ -16,8 +16,8 @@ import {ConfirmComponent} from './bindings/confirm.component';
 })
 
 export class AppComponent {
-  myself = {name:'', age: ''};
-  confirmedMyself = {name:'', age:''};
+  myself = {name: "", age: ""};
+  confirmedMyself = {name: "", age: ""};
 
   onSubmit(myself: {name: string, age: string}) {
     this.myself = myself;

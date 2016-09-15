@@ -1,7 +1,7 @@
-import {Component, EventEmitter} from 'angular2/core';
+import {Component, EventEmitter} from "angular2/core";
 
 @Component ({
-  selector: 'my-confirm',
+  selector: "my-confirm",
   template: `
         <h1> You submitted the following details. Is this correct?</h1>
         <p>Your name is <span class="highlight">{{myself.name}}</span> and your age is <span class="highlight">{{myself.age}}</span> year old. Please click on confirm if you have made any changes to this information</p>
@@ -20,23 +20,23 @@ import {Component, EventEmitter} from 'angular2/core';
         <br>
         <button [disabled]="!isValid" (click)="onConfirm">Submit</button>
   `,
-  inputs: ['myself'],
-  outputs: ['confirmed']
+  inputs: ["myself"],
+  outputs: ["confirmed"]
 })
 
 export class ConfirmComponent {
-  myself = {name:'', age:''};
+  myself = {name: "", age: ""};
   isFilled = false;
   isValid =  false;
   confirmed = new EventEmitter<{name: string, age: string}>();
   onKeyup() {
-    if (this.myself.name != '' && this.myself.age != '') {
+    if (this.myself.name !== "" && this.myself.age !== "") {
       this.isFilled = true;
     } else {
       this.isFilled = false;
     }
 
-    if (this.myself.name != '' && /^\d+$/.test(this.myself.age)) {
+    if (this.myself.name !== "" && /^\d+$/.test(this.myself.age)) {
       this.isValid = true;
     } else {
       this.isValid = false;
